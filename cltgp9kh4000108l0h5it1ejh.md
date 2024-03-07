@@ -2,8 +2,8 @@
 title: "명령형/선언형 프로그래밍을 이해해보자"
 datePublished: Thu Mar 07 2024 04:00:29 GMT+0000 (Coordinated Universal Time)
 cuid: cltgp9kh4000108l0h5it1ejh
-slug: 66qf66c57zivlyeooywuo2ylsdtlitrozzqt7jrnpjrsi3snyqg7j207zw07zw067o07j6q
-cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/xLW2pAMbF4k/upload/a67dfef56b10bab7103b67268e64f457.jpeg
+slug: understand-imperative-declarative-programming
+cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/42uZfLm9uUQ/upload/3d91256cb3188eeff85ea8d1feb25290.jpeg
 tags: declarative-vs-imperative-programming
 
 ---
