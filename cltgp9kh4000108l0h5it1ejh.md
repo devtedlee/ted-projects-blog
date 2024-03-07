@@ -1,5 +1,5 @@
 ---
-title: "명령형/선언형 프로그래밍을 이해해보자"
+title: "명령형/선언적 프로그래밍을 이해해보자"
 datePublished: Thu Mar 07 2024 04:00:29 GMT+0000 (Coordinated Universal Time)
 cuid: cltgp9kh4000108l0h5it1ejh
 slug: understand-imperative-declarative-programming
