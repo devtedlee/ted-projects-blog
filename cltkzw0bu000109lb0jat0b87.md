@@ -2,7 +2,7 @@
 title: "면접에서 기술 질문을 어떻게 하면 좋을까?"
 datePublished: Sun Mar 10 2024 04:08:57 GMT+0000 (Coordinated Universal Time)
 cuid: cltkzw0bu000109lb0jat0b87
-slug: 66m07kcr7jeq7iscioq4soyiocdsp4jrrljsnyqg7ja065a76rkmio2vmouptcdsoovsnytquyw
+slug: how-to-make-good-technical-question
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/8xAA0f9yQnE/upload/5d3a6768b84072d3e2c1fd1978b65fad.jpeg
 tags: technical-interview
 
