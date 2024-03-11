@@ -3,7 +3,7 @@ title: "any와 unknown 타입에 대해 알아보자 - Typescript"
 datePublished: Sat Mar 09 2024 06:35:26 GMT+0000 (Coordinated Universal Time)
 cuid: cltjpojqu000108l870dwddwc
 slug: any-unknown-typescript
-cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/oZuBNC-6E2s/upload/3bd95135ff5199db265a77d4bc3416e1.jpeg
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1710132659535/3798c955-f8bd-43ed-969b-51ae0ae83400.png
 tags: typescript, any-unknown
 
 ---
