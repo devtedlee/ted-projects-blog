@@ -96,25 +96,9 @@ Redux-Saga의 `takeLatest`가 처리하는 동안 JS 이벤트 루프도 동시�
         const result = yield call(api.insert, action.data);
         yield put(insertSuccess(result));
     }
-    //  Redux-Saga에서는 직접 debounce 헬퍼 함수를 제공하지 않아서 
-    //  delay와 race를 조합하여 debounce 효과를 만들어냅니다
-    //  lodash의 debounce를 활용해도 좋습니다.
-    function* watchInsert() {
-        while (true) {
-            // 액션을 받아옴
-            const action = yield take('insert_request');
-            // race 조건에서 delay와 다른 액션을 기다림
-            const { debounced } = yield race({
-                debounced: delay(500), // 500ms 동안 기다림
-                newAction: take('insert_request') // 새로운 'insert_request' 액션이 발생하는지 감지
-            });
     
-            // delay가 끝나고 새로운 액션이 발생하지 않았다면, debounceSaga 실행
-            if (debounced) {
-                yield fork(debounceSaga, action);
-            }
-            // 새로운 액션이 발생하면, 이전 액션은 무시하고 루프를 계속함
-        }
+    function* watchInsert() {
+      yield debounce(500, 'insert_request', insertSaga);
     }
     ```
     
