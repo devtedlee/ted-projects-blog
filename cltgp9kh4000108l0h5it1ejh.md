@@ -77,6 +77,11 @@ const findUsersOverAge = (users, age) => users.filter(user => user.age > age);
 
 // 이 예시에서 `findUsersOverAge` 함수는 저수준의 데이터 구조(여기서는 users 배열)에 의존하지 않으며, 
 // 대신 데이터를 처리하는 데 필요한 추상화된 방식에 의존합니다.
+
+// 함수 사용 예시
+const usersOver25 = findUsersOverAge(users, 25);
+
+console.log(usersOver25);
 ```
 
 이렇게 선언적 프로그래밍은 각 기능을 명확히 분리된 작은 단위로 나눔으로써 코드의 재사용성과 테스트 용이성을 높이며, 디자인 원칙을 준수하는 데 도움을 줍니다.
