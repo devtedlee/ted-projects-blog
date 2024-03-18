@@ -74,7 +74,7 @@ tags: reactjs, useref
       useEffect(() => {
         // 컴포넌트가 마운트된 후 input 요소를 선택하여 포커스를 줌
         const inputElement = document.querySelector('#myInput');
-        if(inputElement) {
+        if (inputElement) {
           inputElement.focus();
         }
       }, []);
