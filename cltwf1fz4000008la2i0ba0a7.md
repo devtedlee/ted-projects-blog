@@ -38,6 +38,58 @@ tags: reactjs, useref
 * `useRef`는 React의 훅 중 하나로, 함수 컴포넌트 내에서 상태나 DOM 요소에 대한 참조를 유지하는데 사용됩니다. 클래스 컴포넌트에서는 `this.refs`를 통해서 사용했던 기능이지만, 16.8버전부터 생겨난 함수 컴포넌트에서는 `useRef`가 동일한 역할을 해줍니다.
     
 
+## 예시를 통해 차이를 알아보기
+
+* `document.querySelector` 사용 케이스
+    
+    ```javascript
+    import React, { useEffect } from 'react';
+    
+    function AutofocusInput() {
+      useEffect(() => {
+        // 컴포넌트가 마운트된 후 input 요소를 선택하여 포커스를 줌
+        const inputElement = document.querySelector('#myInput');
+        if (inputElement) {
+          inputElement.focus();
+        }
+      }, []);
+    
+      return (
+        <input id="myInput" type="text" />
+      );
+    }
+    ```
+    
+    이 예시에서 컴포넌트가 마운트 된 후 `useEffect` 내부에서 `document.querySelector`를 사용해 DOM요소를 찾고 포커스를 주고 있습니다.  
+    \- 이 방법은 작동하지만, React의 선언전 특성과 잘 어울리지 않습니다.  
+    \- 또한 ID를 기반으로 요소를 찾기 때문에 ID가 중복되거나 변경될 경우 예상 못한 동작이 발생할 수 있습니다.  
+    \- 그리고 리액트 렌더링 사이클과 동기화 되지 않기 때문에 만약 리렌더링이 발생되어 요소에 변화가 생기면 참조가 유효하지 않게 될 가능성도 있습니다.
+    
+* `useRef` 사용 케이스
+    
+* ```javascript
+    import React, { useEffect, useRef } from 'react';
+    
+    function AutofocusInput() {
+      const inputRef = useRef(null);
+    
+      useEffect(() => {
+        // 컴포넌트가 마운트되고 나서 input 요소에 포커스를 줌
+        if (inputRef.current) {
+          inputRef.current.focus();
+        }
+      }, []);
+    
+      return (
+        <input ref={inputRef} type="text" />
+      );
+    }
+    ```
+    
+    이 예시에서 `useRef`를 사용하면 React의 선언적 패러다임을 유지하면서도 렌더링 사이클과의 통합을 보장합니다.  
+    또한 컴포넌트의 렌더링 사이클과 자연스럽게 통합되어있기 때문에 컴포넌트의 상태 변화나 리렌더링에 영향을 받지 않고 일관된 참조를 유지할 수 있습니다.
+    
+
 ## 마치며
 
 왜 `useRef`를 사용해야 하는지 정리하며, 리액트의 프로그래밍 철학, 랜더링 동작원리, 메모리까지 연관 되었으므로 꼭 사용해야 된다는 점을 돌이켜 볼 수 있었습니다. 이 글을 보신 분들에게도 가진 지식을 상기하거나 새롭게 알도록 도움이 되었으면 좋겠습니다.
