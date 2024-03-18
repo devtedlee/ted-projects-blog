@@ -67,21 +67,20 @@ tags: reactjs, useref
     
 * `useRef` 사용 케이스
     
-* ```javascript
-    import React, { useEffect, useRef } from 'react';
+    ```javascript
+    import React, { useEffect } from 'react';
     
     function AutofocusInput() {
-      const inputRef = useRef(null);
-    
       useEffect(() => {
-        // 컴포넌트가 마운트되고 나서 input 요소에 포커스를 줌
-        if (inputRef.current) {
-          inputRef.current.focus();
+        // 컴포넌트가 마운트된 후 input 요소를 선택하여 포커스를 줌
+        const inputElement = document.querySelector('#myInput');
+        if(inputElement) {
+          inputElement.focus();
         }
       }, []);
     
       return (
-        <input ref={inputRef} type="text" />
+        <input id="myInput" type="text" />
       );
     }
     ```
