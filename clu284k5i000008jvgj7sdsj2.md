@@ -2,7 +2,7 @@
 title: "유닛 테스트 네이밍 규칙에 대해 알아보자"
 datePublished: Fri Mar 22 2024 05:31:38 GMT+0000 (Coordinated Universal Time)
 cuid: clu284k5i000008jvgj7sdsj2
-slug: 7jyg64ubio2fjoykpo2kucdrhktsnbtrsi0g6rec7lmz7jeqioumgo2vtcdslyzslytrs7tsnpa
+slug: unit-testing-naming-convention
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/tpAyLp9Ro50/upload/1af062a6241e6ad4caac03fa65cec6f8.jpeg
 tags: unit-testing, namingconvention
 
