@@ -28,7 +28,7 @@ tags: javascript, array, higher-order-functions
     const evens = nums.filter(num => num % 2 === 0); // [2, 4]
     ```
     
-3. reduce: 배열의 각 요소에 대해 주어진 고차 함수를 실행하고 하나의 결과값을 만듭니다.
+3. reduce: 배열의 각 요소에 대해 주어진 고차 함수를 실행하고 하나의 결과값을 만듭니다. (생략: 비슷한 함수인데 역순으로 순회하는 reduceRight도 있습니다
     
     ```javascript
     const nums = [1, 2, 3, 4, 5]; 
@@ -86,13 +86,56 @@ tags: javascript, array, higher-order-functions
     ```
     
 
+## ES2022에서 추가된 배열 고차함수
+
+1. findLast: 배열을 역순으로 순회하며 주어진 함수를 만족하는 첫 번째 요소의 값을 반환합니다.
+    
+    ```javascript
+    const nums = [5, 12, 8, 130, 44, 12];
+    const lastLargeNum = nums.findLast(num => num > 10); // 12
+    ```
+    
+2. findLastIndex(): 배열을 역순으로 순회하며 주어진 함수를 만족하는 첫 번째 요소의 인덱스를 반환합니다.
+    
+    ```javascript
+    const nums = [5, 12, 8, 130, 44, 12];
+    const indexLastLargeNum = nums.findLastIndex(num => num > 10); // 5
+    ```
+    
+
+## ES2023 에서 추가된 배열 고차함수
+
+1. toReversed: reverse에 대응 되는 복사 메서드입니다. ([복사 메서드 설명](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#%EB%B3%B5%EC%82%AC_%EB%A9%94%EC%84%9C%EB%93%9C%EC%99%80_%EB%B3%80%EA%B2%BD_%EB%A9%94%EC%84%9C%EB%93%9Cmutating_method))
+    
+    ```javascript
+    const nums = [1, 2, 3, 4, 5];
+    const reversedNums = nums.toReversed(); //  [5, 4, 3, 2, 1]
+    ```
+    
+2. toSorted: sort에 대응되는 복사 메서드입니다.
+    
+    ```javascript
+    const nums = [5, 3, 4, 1, 2];
+    const sortedNums = nums.toSorted((a, b) => a - b); // [1, 2, 3, 4, 5]
+    ```
+    
+3. toSpliced: splice에 대응되는 복사 메서드입니다.
+    
+    ```javascript
+    const nums = [1, 2, 3, 4, 5];
+    const splicedNums = nums.toSpliced(1, 2, 6, 7); // [1, 6, 7, 4, 5]
+    ```
+    
+
+> 한 가지 특이사항으로 ES2023의 복사 메서드들은 만약 배열 값 중 희소 배열 이 있을 경우 undefined로 대체하여 성능 저하 위협 요인을 방지합니다.
+
 ## 고차 함수 사용 시 주의사항
 
 1. **성능 고려하기**: 고차 함수의 연쇄 사용시 큰 데이터 셋에서는 성능 저하를 일으킬 수 있습니다. 순회의 횟수가 많다면 고민이 필요합니다.
     
 2. **순수 함수 사용하기**: 고차 함수에 전달되는 콜백 함수는 외부 상태를 변경하지 않는 동일 입력 동일 결과를 리턴하는 순수 함수를 이용하면 좋습니다.
     
-3. `this` **값 주의하기**: `forEach`, `map`, `filter` 같은 고차 함수에서는 함수 내부의 `this`의 값이 예상과 다를 수 있습니다. 고차 함수의 두번째 인자로 `this`를 명시적으로 전달하거나, bind를 따로 하고 넘기던가, 화살표 함수를 사용하는 방식으로 대응이 필요합니다.
+3. `this`**값 주의하기**: `forEach`, `map`, `filter` 같은 고차 함수에서는 함수 내부의 `this`의 값이 예상과 다를 수 있습니다. 고차 함수의 두번째 인자로 `this`를 명시적으로 전달하거나, bind를 따로 하고 넘기던가, 화살표 함수를 사용하는 방식으로 대응이 필요합니다.
     
 4. **원본 배열 불변성 유지**: 원본 배열을 조작하는 경우 예상치 못한 동작을 초래할 수 있습니다. 스프레드 연산자 등을 활용해서 원본 배열과의 연관을 끊는 등 방어적 코드를 작성해주면 좋습니다.
     
