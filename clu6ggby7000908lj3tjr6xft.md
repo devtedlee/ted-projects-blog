@@ -13,7 +13,7 @@ tags: immutable, redux
 이 때 많이 사용되는 기술이 `immer`입니다. `immer`는 불변성을 유지하면서도 상태 값을 변경하는데 도움을 줍니다.  
 어떤 도움을 주는지는 코드를 보며 이해하면 좋습니다. 일단 immer가 없는 채로 depth가 꽤 깊은 상태 데이터를 수정하는 코드를 먼저 살펴보겠습니다.
 
-**예시) 직접 불변성 관리하기**
+## **예시) 직접 불변성 관리하기**
 
 ```javascript
 const state = {
@@ -56,7 +56,7 @@ const updatedState = updateUserAddress(state, "Busan");
 * **테스트 용이성**: 결합도가 낮아지다보니 함수 단위로 테스트하기가 더 용이합니다.
     
 
-**예시) immer로 불변성 관리하기**
+## **예시) immer로 불변성 관리하기**
 
 ```javascript
 import produce from "immer";
