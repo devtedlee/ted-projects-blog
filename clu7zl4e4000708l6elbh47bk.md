@@ -2,7 +2,7 @@
 title: "요즘 리덕스 - 리덕스 툴킷에 대해 알아보자"
 datePublished: Tue Mar 26 2024 06:19:11 GMT+0000 (Coordinated Universal Time)
 cuid: clu7zl4e4000708l6elbh47bk
-slug: 7jqu7kayioumrounleykpcatioumrounleykpcdtilttgrfsl5ag64ya7zw0ioyvjoyvhouztoyeka
+slug: about-redux-toolkit
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1711433904341/2d67fd74-53c1-4f79-952b-da994cf87b3c.png
 tags: redux, redux-saga, redux-toolkit
 
