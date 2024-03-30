@@ -2,7 +2,7 @@
 title: "나침반을 통해 나아가는 커리어 항해"
 datePublished: Sat Mar 30 2024 13:17:35 GMT+0000 (Coordinated Universal Time)
 cuid: clue4alub000608i88lwv2b42
-slug: failure-equals-compass
+slug: failure-is-a-compass
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1711803324864/e54d2d25-6b5a-45f4-bacf-b6c9fe868d3f.webp
 tags: 7zwc6riw7jqp
 
