@@ -141,4 +141,4 @@ export default function Component() {
 
 * 간단하게 `useSyncExternalStore` 훅의 기본 사용법, 왜 사용하는지, 구현 예시, 적용했을 때의 장점 등에 대해 알아 봤습니다.
     
-* 이 훅이 왜 생겨났는지는 간단하게는 React 애플리케이션 내에서 외부 데이터 소스를 보다 원활하고 예측 가능하며 고성능으로 통합할 수 있도록 해주기 위해서입니다. 좀 더 알고 싶으시면 이 링크들을 참고해주세요. [깃허브토론](https://github.com/reactwg/react-18/discussions/86), [동시 렌더링 중 티어링 이슈 해결을 위한 것이라는 블로그 글](https://blog.saeloun.com/2021/12/30/react-18-useSyncExternalStore-api/)
+* 이 훅이 왜 생겨났는지는 간단하게는 React 애플리케이션 내에서 외부 데이터 소스를 보다 원활하고 예측 가능하며 고성능으로 통합할 수 있도록 해주기 위해서입니다. 좀 더 알고 싶으시면 이 링크들을 참고해주세요. [동시 렌더링 때문에 적용된 useSyncExternalStore 깃허브 링크](https://github.com/reactwg/react-18/discussions/86), [동시 렌더링 중 티어링 이슈 해결을 위한 것이라는 블로그 글](https://blog.saeloun.com/2021/12/30/react-18-useSyncExternalStore-api/)
