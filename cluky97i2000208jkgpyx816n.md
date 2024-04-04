@@ -57,13 +57,13 @@ tags: react-internals
 
 다음은 디버깅 프로세스를 시연하는 데 사용할 코드입니다.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1712205575957/f3dfea1f-1464-4811-ba9d-227ce500a806.png align="center")
+[![](https://cdn.hashnode.com/res/hashnode/image/upload/v1712205575957/f3dfea1f-1464-4811-ba9d-227ce500a806.png align="center")](https://cdn.hashnode.com/res/hashnode/image/upload/v1712205575957/f3dfea1f-1464-4811-ba9d-227ce500a806.png align="center")
 
 > ℹ️ [위의 데모](https://jser.dev/demos/react/overview/index.html)를 사용해보고 아래의 설명을 따라해 보세요.
 
 React는 UI 라이브러리이므로 중요한 작업 중 하나는 DOM이 조작되는 코드를 찾은 다음 호출 스택을 읽고 무슨 일이 일어나고 있는지 파악하는 것입니다. 여기서는 아래와 같이 DOM 컨테이너에 DOM 중단점을 만들면 됩니다.
 
-![](https://jser.dev/static/react-overview-debug-1.png align="left")
+[![](https://jser.dev/static/react-overview-debug-1.png align="left")](https://jser.dev/static/react-overview-debug-1.png align="left")
 
 이제 디버깅할 차례입니다.
 
@@ -88,7 +88,7 @@ React는 UI 라이브러리이므로 중요한 작업 중 하나는 DOM이 조�
 
 ### 2.3 두 번째 일시정지: DOM 조작
 
-![](https://jser.dev/static/react-overview-debug-3.png align="left")
+[![](https://jser.dev/static/react-overview-debug-3.png align="left")](https://jser.dev/static/react-overview-debug-3.png align="left")
 
 UI 라이브러리로서, 목표는 DOM 업데이트를 관리하는 것입니다. 이는 실제로 상단의 "렌더링" 단계 이후의 "커밋" 단계에 해당합니다.
 
@@ -101,7 +101,7 @@ UI 라이브러리로서, 목표는 DOM 업데이트를 관리하는 것입니�
 
 ### 2.4 세 번째 일시정지: 이펙트 실행
 
-![](https://jser.dev/static/react-overview-debug-4.png align="left")
+[![](https://jser.dev/static/react-overview-debug-4.png align="left")](https://jser.dev/static/react-overview-debug-4.png align="left")
 
 이제 `useEffect()` 호출에서 일시 중지되는 것을 볼 수 있습니다.
 
@@ -112,7 +112,7 @@ UI 라이브러리로서, 목표는 DOM 업데이트를 관리하는 것입니�
 
 ### 2.5 컴포넌트 렌더링에서 다시 일시정지
 
-![](https://jser.dev/static/react-overview-debug-5.png align="left")
+[![](https://jser.dev/static/react-overview-debug-5.png align="left")](https://jser.dev/static/react-overview-debug-5.png align="left")
 
 `useEffect()` 에서 `setState()` 를 호출하여 리-렌더링을 트리거 시키는데, 콜 스택을 보면 전체 리-렌더링이 첫 번째 중단점 일시 정지와 매우 유사하다는 것을 알 수 있지만, `performConcurrentWorkOnRoot()` 내부에서는 `mountIndeterminateComponent()` 가 아닌`updateFunctionComponent()` 를 호출한다는 점이 다릅니다.
 
@@ -122,7 +122,7 @@ React 소스 코드에서, `마운트`는 초기 렌더링을 의미하는데, �
 
 사실 위의 스크린샷은 이미 React internals의 기본을 다루고 있습니다. 개요로서 너무 자세한 내용은 다루지 않겠지만, 이미 세부적인 내용을 파악했기 때문에 아래와 같이 React 내부의 개요를 4단계로 나눠서 그려보겠습니다.
 
-![](https://jser.dev/static/react-internals-overview-light.png align="left")
+[![](https://jser.dev/static/react-internals-overview-light.png align="left")](https://jser.dev/static/react-internals-overview-light.png align="left")
 
 ### 3.1 Trigger
 
