@@ -43,7 +43,7 @@ export default function App() {
 
 ## 1\. 파이버 아키텍처에 대한 간략한 소개
 
-[![파이버 아키텍쳐 다이어그램 ](https://cdn.hashnode.com/res/hashnode/image/upload/v1712231381102/725558eb-24a4-4210-b2b5-3459e7f7f7a8.png align="center")](https://jser.dev/static/fiber-brief-intro-dark.png)
+[![파이버 아키텍쳐 다이어그램 ](https://cdn.hashnode.com/res/hashnode/image/upload/v1712231381102/725558eb-24a4-4210-b2b5-3459e7f7f7a8.png align="center")](https://cdn.hashnode.com/res/hashnode/image/upload/v1712231381102/725558eb-24a4-4210-b2b5-3459e7f7f7a8.png?auto=compress,format&format=webp)
 
 Fiber는 React가 앱 상태를 내부적으로 표현하는 방식의 아키텍처입니다. FiberRootNode와 FiberNode로 구성된 트리-like 구조입니다. Fiber에는 모든 종류의 FiberNode가 있으며, 그 중 일부는 백업 DOM 노드인 HostComponent를 가지고 있습니다.
 
@@ -941,7 +941,7 @@ function updateHostText(current, workInProgress) {
 
 ### 3.13 DOM 노드는 `completeWork()`내에서, 즉 화면 외부에서 생성됩니다.
 
-[EP15 - React가 내부적으로 Fiber 트리를 순회하는 방법](https://jser.dev/react/2022/01/16/fiber-traversal-in-react/)에서 언급했듯이, [](https://jser.dev/react/2022/01/16/fiber-traversal-in-react/)파이버에서 `completeWork()`가 호출된 후 그 형제(siblings)가 `beginWork()`로 시도되기 전에 호출됩니다.
+[EP15 - React가 내부적으로 Fiber 트리를 순회하는 방법](https://jser.dev/react/2022/01/16/fiber-traversal-in-react/)에서 언급했듯이, 파이버에서 `completeWork()`가 호출된 후 그 형제(siblings)가 `beginWork()`로 시도되기 전에 호출됩니다.
 
 Fiber Node에는 한 가지 중요한 프로퍼티인 `stateNode` 가 있는데, 이는 내재적 HTML 태그의 경우 실제 DOM 노드를 참조합니다. 그리고 DOM 노드의 실제 생성은 `completeWork()`에서 이루어집니다.
 
