@@ -17,7 +17,7 @@ tags: react-internals
 > 
 > ⚠ [React@18.2.0](https://github.com/facebook/react/releases/tag/v18.2.0) 기준, 최신 버전에서는 구현이 변경되었을 수 있습니다.\\
 
-[React Internals 개요](https://jser.dev/2023-07-11-overall-of-react-internals)에서 React는 내부적으로 트리-like 구조(Fiber Tree)를 사용하여 최소 DOM 업데이트를 계산하고 "Commit" 단계에서 이를 커밋한다고 간략하게 언급했습니다. 이 글에서는 React가 초기 마운트(최초 렌더링)를 정확히 어떻게 수행하는지 알아보겠습니다. 좀 더 구체적으로, 아래 코드를 통해 React가 DOM을 어떻게 구성하는지 알아보겠습니다.
+[React Internals 개요](https://ted-projects.com/react-internals-deep-dive-1)에서 React는 내부적으로 트리-like 구조(Fiber Tree)를 사용하여 최소 DOM 업데이트를 계산하고 "Commit" 단계에서 이를 커밋한다고 간략하게 언급했습니다. 이 글에서는 React가 초기 마운트(최초 렌더링)를 정확히 어떻게 수행하는지 알아보겠습니다. 좀 더 구체적으로, 아래 코드를 통해 React가 DOM을 어떻게 구성하는지 알아보겠습니다.
 
 ```typescript
 import {useState} from 'react'
