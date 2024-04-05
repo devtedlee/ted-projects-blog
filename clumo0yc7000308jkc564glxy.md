@@ -1446,11 +1446,11 @@ function insertOrAppendPlacementNodeIntoContainer(
 
 ## 5\. 요약
 
-DOM이 어떻게 생성되고 컨테이너에 삽입되는지 확인했습니다. 최초 마운트의 경우입니다,
+최초 마운트일 경우,  DOM이 어떻게 생성되고 컨테이너에 삽입되는지 확인했습니다.
 
 1. Fiber Tree는 조정(reconciliation)하는 동안 느리게(lazily) 생성되며, 백업 DOM 노드는 동시에 생성되고 구성됩니다.
     
-2. `HostRoot`의 직계 자식은 `Plcement`로 표시됩니다.
+2. `HostRoot`의 직계 자식은 `Placement`로 표시됩니다.
     
 3. "Commit" 단계에서는 `Placement`로 Fiber를 찾습니다. 부모가 HostRoot이므로, 해당 DOM 노드가 컨테이너에 삽입됩니다.
     
