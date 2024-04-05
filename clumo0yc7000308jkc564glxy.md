@@ -17,6 +17,33 @@ tags: react-internals
 > 
 > ⚠ [React@18.2.0](https://github.com/facebook/react/releases/tag/v18.2.0) 기준, 최신 버전에서는 구현이 변경되었을 수 있습니다.\\
 
+---
+
+- [1. 파이버 아키텍처에 대한 간략한 소개](#1-파이버-아키텍처에-대한-간략한-소개)
+  - [1.1 `FiberRootNode`](#11-fiberrootnode)
+  - [1.2 `FiberNode`](#12-fibernode)
+- [2. 최초 마운트: Trigger 단계](#2-최초-마운트-trigger-단계)
+- [3. 최초 마운트: Render 단계](#3-최초-마운트-render-단계)
+  - [3.1 `performConcurrentWorkRoot()`](#31-performconcurrentworkroot)
+  - [3.2 `renderRootSync()`](#32-renderrootsync)
+  - [3.3 `performUnitOfWork()`](#33-performunitofwork)
+  - [3.4 `prepareFreshStack()`](#34-preparefreshstack)
+  - [3.5 `updateHostRoot()`](#35-updatehostroot)
+  - [3.6 `reconcileChildren()`](#36-reconcilechildren)
+  - [3.7 `reconcileChildFibers()` vs `mountChildFibers()`](#37-reconcilechildfibers-vs-mountchildfibers)
+  - [3.8 `reconcileSingleElement()`](#38-reconcilesingleelement)
+  - [3.9 `placeSingleChild()`](#39-placesinglechild)
+  - [3.10 `mountIndeterminateComponent()`](#310-mountindeterminatecomponent)
+- [3.11 `updateHostComponent()`](#311-updatehostcomponent)
+  - [3.12 `updateHostTest()`](#312-updatehosttest)
+  - [3.13 DOM 노드는 `completeWork()`내에서, 즉 화면 외부에서 생성됩니다.](#313-dom-노드는-completework내에서-즉-화면-외부에서-생성됩니다)
+- [4. 최초 마운트: Commit 단계](#4-최초-마운트-commit-단계)
+  - [4.1 `commitMutationEffects()`](#41-commitmutationeffects)
+  - [4.2 `commitReconciliationEffects()`](#42-commitreconciliationeffects)
+  - [4.3 `commitPlacement()`](#43-commitplacement)
+- [5. 요약](#5-요약)
+---
+
 [React Internals 개요](https://ted-projects.com/react-internals-deep-dive-1)에서 React는 내부적으로 트리-like 구조(Fiber Tree)를 사용하여 최소 DOM 업데이트를 계산하고 "Commit" 단계에서 이를 커밋한다고 간략하게 언급했습니다. 이 글에서는 React가 초기 마운트(최초 렌더링)를 정확히 어떻게 수행하는지 알아보겠습니다. 좀 더 구체적으로, 아래 코드를 통해 React가 DOM을 어떻게 구성하는지 알아보겠습니다.
 
 ```typescript
