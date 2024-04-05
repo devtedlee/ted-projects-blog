@@ -25,7 +25,7 @@ tags: react-internals
 
 ## 1\. React Internals 배우기 팁
 
-### 1.1 Grok 공식 자원
+### 1.1 공식 자원 [Grok](https://en.wikipedia.org/wiki/Grok)하기
 
 [React.dev](https://react.dev/)는 React API를 배울 수 있을 뿐만 아니라 React 핵심 팀의 생각도 배울 수 있는 멋진 곳입니다. 그들은 왜 그런 선택을 했는지 설명하는 데 많은 노력을 기울였습니다.
 
@@ -33,11 +33,11 @@ tags: react-internals
 
 ### 1.2 React 팀 따르기
 
-[나열된 모든 멤버들](https://react.dev/community/team)을 팔로우하여 React 팀이 하는 일을 계속 업데이트하고, 인터넷에서 그들의 토론을 통해 코드에서 찾을 수 없는 독특한 관점을 얻을 수 있습니다.
+[리스트의 모든 멤버들](https://react.dev/community/team)을 팔로우하여 React 팀이 하는 일을 계속 업데이트하고, 인터넷에서 그들의 토론을 통해 코드에서 찾을 수 없는 독특한 관점을 얻을 수 있습니다.
 
 ### 1.3 리액트 저장소 따르기
 
-[React repo@github](https://github.com/facebook/react)는 코드뿐만 아니라 PR과 코드 리뷰도 볼 수 있는 곳입니다. 대부분의 경우 코드의 주석보다 더 나은 설명이 포함되어 있습니다.
+[React repo](https://github.com/facebook/react)는 코드뿐만 아니라 PR과 코드 리뷰도 볼 수 있는 곳입니다. 대부분의 경우 코드의 주석보다 더 나은 설명이 포함되어 있습니다.
 
 ### 1.4 게시글이 아닌, 코드를 신뢰하기
 
@@ -132,7 +132,7 @@ React 소스 코드에서, `마운트`는 초기 렌더링을 의미하는데, �
 
 관련 주제는 다음을 참조하세요:
 
-1. [5번째 - React에서 useState()는 내부적으로 어떻게 작동하나요?](https://jser.dev/2023-06-19-how-does-usestate-work/)
+1. [EP5 - useState()는 어떻게 작동하나요?](https://jser.dev/2023-06-19-how-does-usestate-work/)
     
 
 ### 3.2 Scheduler
@@ -141,7 +141,7 @@ React 소스 코드에서, `마운트`는 초기 렌더링을 의미하는데, �
 
 스케줄러에 대한 자세한 내용은 다음을 참조하세요:
 
-1. [20번째 - React 스케줄러는 어떻게 작동하나요?](https://jser.dev/react/2022/03/16/how-react-scheduler-works/)
+1. [EP20 - 스케쥴러는 어떻게 작동하나요?](https://jser.dev/react/2022/03/16/how-react-scheduler-works/)
     
 
 ### 3.3 Render
@@ -156,13 +156,13 @@ React 소스 코드에서, `마운트`는 초기 렌더링을 의미하는데, �
 
 자세한 내용은 다음 에피소드를 참조하세요:
 
-1. [15번째 - React는 내부적으로 파이버 트리를 어떻게 순회하나요?](https://jser.dev/react/2022/01/16/fiber-traversal-in-react/)
+1. [EP15 - Fiber Tree를 어떻게 순회하나요?](https://jser.dev/react/2022/01/16/fiber-traversal-in-react/)
     
-2. [13번째 - 리액트 구제 조치는 조정에서 어떻게 작동하나요?](https://jser.dev/react/2022/01/07/how-does-bailout-work/)
+2. [EP13 - bail out은 조정(reconciliation)에서 어떻게 작동하나요?](https://jser.dev/react/2022/01/07/how-does-bailout-work/)
     
-3. [19번째 - '키'는 내부적으로 어떻게 작동하나요? React의 목록 차이](https://jser.dev/react/2022/02/08/the-diffing-algorithm-for-array-in-react/)
+3. [EP19 - 'key'는 어떻게 작동하나요? 리스트 diffing](https://jser.dev/react/2022/02/08/the-diffing-algorithm-for-array-in-react/)
     
-4. [21번째 - React 소스 코드에서 레인이란 무엇인가요?](https://jser.dev/react/2022/03/26/lanes-in-react/)
+4. [EP21 - React 소스 코드에서 Lanes란 무엇인가요?](https://jser.dev/react/2022/03/26/lanes-in-react/)
     
 
 ### 3.4 Commit
@@ -173,13 +173,13 @@ React 소스 코드에서, `마운트`는 초기 렌더링을 의미하는데, �
 
 관련 에피소드:
 
-1. [10번째 - useLayoutEffect()는 내부적으로 어떻게 작동하나요?](https://jser.dev/react/2021/12/04/how-does-useLayoutEffect-work/)
+1. [EP10 - useLayoutEffect()는 어떻게 작동하나요?](https://jser.dev/react/2021/12/04/how-does-useLayoutEffect-work/)
     
-2. [4번째 - React에서 useEffect()는 내부적으로 어떻게 작동하나요?](https://jser.dev/2023-07-08-how-does-useeffect-work/)
+2. [EP4 - useEffect()는 어떻게 작동하나요?](https://jser.dev/2023-07-08-how-does-useeffect-work/)
     
-3. [8번째 - React에서 useTransition()은 내부적으로 어떻게 작동하나요?](https://jser.dev/2023-05-19-how-does-usetransition-work/)
+3. [EP8 - useTransition()은 어떻게 작동하나요?](https://jser.dev/2023-05-19-how-does-usetransition-work/)
     
-4. [16번째 - React에서 이펙트 훅의 수명 주기](https://jser.dev/react/2022/01/19/lifecycle-of-effect-hook/)
+4. [EP16 - Effect Hooks의 생명 주기](https://jser.dev/react/2022/01/19/lifecycle-of-effect-hook/)
     
 
 ## 4\. 요약
