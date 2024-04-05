@@ -1,5 +1,5 @@
 ---
-title: "[번역] React internals Deep Dive 개요"
+title: "[번역] React Internals Deep Dive 개요"
 datePublished: Thu Apr 04 2024 08:02:56 GMT+0000 (Coordinated Universal Time)
 cuid: cluky97i2000208jkgpyx816n
 slug: react-internals-deep-dive-1
