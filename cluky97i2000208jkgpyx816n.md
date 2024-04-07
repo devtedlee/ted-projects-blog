@@ -17,7 +17,7 @@ tags: react-internals
 > 
 > ⚠ [React@18.2.0](https://github.com/facebook/react/releases/tag/v18.2.0) 기준, 최신 버전에서는 구현이 변경되었을 수 있습니다.
 
-더 나은 React 코드를 작성하기 위해 React 내부에 대해 더 많이 알고 싶지만, 뛰어들고 싶지만 물이 너무 넓고 깊은 것처럼 어렵고 어디서부터 시작해야 할지 모릅니다.
+더 나은 React 코드를 작성하기 위해 React 내부에 대해 더 많이 알고 싶지만, 뛰어들고 싶은 물이 너무 넓고 깊은 것처럼 어렵고 어디서부터 시작해야 할지 모릅니다.
 
 저는 2021년에 똑같은 어려움을 겪었지만, 어려움을 잘 관리하여 React 내부의 작동 방식을 설명하는 30개 이상의 에피소드가 포함된 [React Internals Deep Dive](https://jser.dev/series/react-source-code-walkthrough) 시리즈를 만들 수 있었습니다.
 
