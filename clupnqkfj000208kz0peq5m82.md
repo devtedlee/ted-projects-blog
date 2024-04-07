@@ -1950,3 +1950,5 @@ export function commitTextUpdate(
 아래 슬라이드에 단계를 정리해 두었으니 도움이 되길 바랍니다.
 
 [JSer의 슬라이드 링크](https://jser.dev/2023-07-18-how-react-rerenders/#how-react-re-renders-internally)
+
+원글 작성일: 2023-07-23
