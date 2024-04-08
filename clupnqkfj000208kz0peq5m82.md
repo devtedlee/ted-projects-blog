@@ -62,7 +62,7 @@ export default function App() {
   - [2.4 `attemptEarlyBailoutIfNoScheduledUpdate()` 내의 Bailout 로직](#heading-24-attemptearlybailoutifnoscheduledupdate-bailout)
   - [2.5 `memoizedProps` vs `pendingProps`](#heading-25-memoizedprops-vs-pendingprops)
   - [2.6 `updateFunctionComponent()` 는 함수 컴포넌트를 리-렌더링하고 자식을 조정합니다.](#heading-26-updatefunctioncomponent)
-  - [2.7 \```reconcileSingleElement()```](#heading-27-reconcilesingleelement)
+  - [2.7 \`reconcileSingleElement()`](#heading-27-reconcilesingleelement)
   - [2.8 컴포넌트가 리-렌더링되면 기본적으로 해당 하위 트리가 리-렌더링됩니다.](#heading-28)
   - [2.9 `updateHostComponent()`](#heading-29-updatehostcomponent)
   - [2.10 `reconcileChildrenArray()` 는 필요에 따라 Fiber를 생성하고 삭제합니다.](#heading-210-reconcilechildrenarray-fiber)
@@ -709,7 +709,7 @@ function reconcileChildFibersImpl(
 
 `<Component/>`의 경우 단일 `div`를 반환합니다. 따라서 `reconcileSingleElement()`로 이동하겠습니다.
 
-### 2.7 \``` reconcileSingleElement()` ``
+### 2.7 \` reconcileSingleElement()`
 
 ```typescript
 function reconcileSingleElement(
