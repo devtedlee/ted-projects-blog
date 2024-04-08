@@ -45,36 +45,60 @@ export default function App() {
     </div>
   );
 }
-
 ```
 
 * [코드 샌드박스 링크](https://codesandbox.io/s/tt7kwc?file=%2FApp.js&utm_medium=sandpack)
     
 * [데모 링크](https://jser.dev/demos/react/overview/re-render.html)
+    
 
 ---
-- [1. Re-render: Trigger phase](#heading-1-re-render-trigger-phase)
-  - [1.1 `lanes` and `childLanes`](#heading-11-lanes-and-childlanes)
-- [2. Re-render : Render phase](#heading-2-re-render--render-phase)
-  - [2.1 기본 렌더링 로직은 최초 마운트와 동일합니다.](#heading-21)
-  - [2.2 React는 새로운 Fiber Node를 생성하기 전에 중복된 Fiber Node를 재사용합니다.](#heading-22-react-fiber-node-fiber-node)
-  - [2.3 `beginWork()` 내의 업데이트 브랜치](#heading-23-beginwork)
-  - [2.4 `attemptEarlyBailoutIfNoScheduledUpdate()` 내의 Bailout 로직](#heading-24-attemptearlybailoutifnoscheduledupdate-bailout)
-  - [2.5 `memoizedProps` vs `pendingProps`](#heading-25-memoizedprops-vs-pendingprops)
-  - [2.6 `updateFunctionComponent()` 는 함수 컴포넌트를 리-렌더링하고 자식을 조정합니다.](#heading-26-updatefunctioncomponent)
-  - [2.7 \`reconcileSingleElement()`](#heading-27-reconcilesingleelement)
-  - [2.8 컴포넌트가 리-렌더링되면 기본적으로 해당 하위 트리가 리-렌더링됩니다.](#heading-28)
-  - [2.9 `updateHostComponent()`](#heading-29-updatehostcomponent)
-  - [2.10 `reconcileChildrenArray()` 는 필요에 따라 Fiber를 생성하고 삭제합니다.](#heading-210-reconcilechildrenarray-fiber)
-  - [2.11 `placeChild()` 및 `deleteChild()` 는 플래그로 Fiber를 표시합니다.](#heading-211-placechild-deletechild-fiber)
-  - [2.12 `updateHostText()`](#heading-212-updatehosttext)
-  - [2.13 `completeWork()` 는 HostComponent의 업데이트를 표시하고 필요한 경우 DOM 노드를 생성합니다.](#heading-213-completework-hostcomponent-dom)
-- [3. Re-render: Commit Phase](#heading-3-re-render-commit-phase)
-  - [3.1 `commitMutationEffectsOnFiber()` 는 Insertion/Deletion/Update의 커밋을 시작합니다.](#heading-31-commitmutationeffectsonfiber-insertiondeletionupdate)
-  - [3.2 삭제가 먼저 처리된 후, 자식 및 self를 처리합니다.](#heading-32-self)
-  - [3.3 삽입은 다음으로 처리됩니다.](#heading-33)
-  - [3.4 업데이트는 마지막에 처리됩니다.](#heading-34)
-- [4. 요약](#heading-4)
+
+* [1\. Re-render: Trigger phase](#heading-1-re-render-trigger-phase)
+    
+    * [1.1 `lanes` and `childLanes`](#heading-11-lanes-and-childlanes)
+        
+* [2\. Re-render : Render phase](#heading-2-re-render--render-phase)
+    
+    * [2.1 기본 렌더링 로직은 최초 마운트와 동일합니다.](#heading-21)
+        
+    * [2.2 React는 새로운 Fiber Node를 생성하기 전에 중복된 Fiber Node를 재사용합니다.](#heading-22-react-fiber-node-fiber-node)
+        
+    * [2.3 `beginWork()` 내의 업데이트 브랜치](#heading-23-beginwork)
+        
+    * [2.4 `attemptEarlyBailoutIfNoScheduledUpdate()` 내의 Bailout 로직](#heading-24-attemptearlybailoutifnoscheduledupdate-bailout)
+        
+    * [2.5 `memoizedProps` vs `pendingProps`](#heading-25-memoizedprops-vs-pendingprops)
+        
+    * [2.6 `updateFunctionComponent()` 는 함수 컴포넌트를 리-렌더링하고 자식을 조정합니다.](#heading-26-updatefunctioncomponent)
+        
+    * [2.7 `reconcileSingleElement()`](#heading-27-reconcilesingleelement)
+        
+    * [2.8 컴포넌트가 리-렌더링되면 기본적으로 해당 하위 트리가 리-렌더링됩니다.](#heading-28)
+        
+    * [2.9 `updateHostComponent()`](#heading-29-updatehostcomponent)
+        
+    * [2.10 `reconcileChildrenArray()` 는 필요에 따라 Fiber를 생성하고 삭제합니다.](#heading-210-reconcilechildrenarray-fiber)
+        
+    * [2.11 `placeChild()` 및 `deleteChild()` 는 플래그로 Fiber를 표시합니다.](#heading-211-placechild-deletechild-fiber)
+        
+    * [2.12 `updateHostText()`](#heading-212-updatehosttext)
+        
+    * [2.13 `completeWork()` 는 HostComponent의 업데이트를 표시하고 필요한 경우 DOM 노드를 생성합니다.](#heading-213-completework-hostcomponent-dom)
+        
+* [3\. Re-render: Commit Phase](#heading-3-re-render-commit-phase)
+    
+    * [3.1 `commitMutationEffectsOnFiber()` 는 Insertion/Deletion/Update의 커밋을 시작합니다.](#heading-31-commitmutationeffectsonfiber-insertiondeletionupdate)
+        
+    * [3.2 삭제가 먼저 처리된 후, 자식 및 self를 처리합니다.](#heading-32-self)
+        
+    * [3.3 삽입은 다음으로 처리됩니다.](#heading-33)
+        
+    * [3.4 업데이트는 마지막에 처리됩니다.](#heading-34)
+        
+* [4\. 요약](#heading-4)
+    
+
 ---
 
 # 1\. Re-render: Trigger phase
@@ -709,7 +733,7 @@ function reconcileChildFibersImpl(
 
 `<Component/>`의 경우 단일 `div`를 반환합니다. 따라서 `reconcileSingleElement()`로 이동하겠습니다.
 
-### 2.7 \` reconcileSingleElement()`
+### 2.7 `reconcileSingleElement()`
 
 ```typescript
 function reconcileSingleElement(
