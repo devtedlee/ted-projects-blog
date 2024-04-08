@@ -20,30 +20,32 @@ tags: react-internals
 [React가 최초 마운트](https://ted-projects.com/react-internals-deep-dive-2)를 수행하고 전체 DOM을 처음부터 생성하는 방법에 대해 설명했습니다. 최초 마운트 후 리-렌더링할 때 React는 재조정(recouncile) 과정을 통해 가능한 한 DOM을 재사용하려고 합니다. 이 에피소드에서는 아래 데모에서 버튼을 클릭한 후 React가 리렌더링할 때 실제로 어떤 일이 일어나는지 알아보겠습니다.
 
 ```javascript
-import {useState} from 'react'
-  function Link() {
-    return <a href="https://jser.dev">jser.dev</a>;
-  }
+import { useState } from 'react';
+function Link() {
+  return <a href='https://jser.dev'>jser.dev</a>;
+}
 
-  function Component() {
-    const [count, setCount] = useState(0);
-    return (
-      <div>
+function Component() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
       <button onClick={() => setCount((count) => count + 1)}>
-        click me - {count} 
-      </button> ({count % 2 === 0 ? <span>even</span> : <b>odd</b>})
-      </div>
-    );
-  }
-  export default function App() {
-    return (
-      <div>
-        <Link />
-        <br />
-        <Component />
-      </div>
-    );
-  }
+        click me - {count}
+      </button> 
+      ({count % 2 === 0 ? <span>even</span> : <b>odd</b>})
+    </div>
+  );
+}
+export default function App() {
+  return (
+    <div>
+      <Link />
+      <br />
+      <Component />
+    </div>
+  );
+}
+
 ```
 
 * [코드 샌드박스 링크](https://codesandbox.io/s/tt7kwc?file=%2FApp.js&utm_medium=sandpack)
