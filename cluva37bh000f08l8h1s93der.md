@@ -9,7 +9,7 @@ tags: react-internals
 ---
 
 > 영문 블로그 글을 번역했습니다. 허가를 받으면 시리즈를 이어갈 예정입니다.  
-> 원문링크: [https://jser.dev/2023-07-08-how-does-useeffect-work](https://jser.dev/2023-07-08-how-does-useeffect-work)
+> 원문링크: [https://jser.dev/2023-06-19-how-does-usestate-work](https://jser.dev/2023-06-19-how-does-usestate-work)
 
 ---
 
@@ -601,8 +601,8 @@ userEvent.click(screen.getByText('click me'))
 * 정답 링크: [링크](https://stackoverflow.com/questions/57652176/react-hooks-usestate-setvalue-still-rerender-one-more-time-when-value-is-equal)
     
 
-같은 state 값을 설정해도 왜 리-렌더링이 발생하는지 알아내는 데 꽤 오랜 시간이 걸렸습니다.  
-  
+같은 state 값을 설정해도 왜 리-렌더링이 발생하는지 알아내는 데 꽤 오랜 시간이 걸렸습니다.
+
 이를 이해하려면 더 깊이 파고들지 않은 `dispatchSetState()` 내부의 긴급 bailout 조건으로 돌아가야 합니다.
 
 ```typescript
