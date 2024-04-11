@@ -258,6 +258,8 @@ export function enqueueConcurrentHookUpdate<S, A>(
 }
 ```
 
+> 💬 역자 주석: dirty 플래그란, 변경 사항이 있는 파이버를 가리키는 플래그입니다.
+
 ```typescript
 function markUpdateLaneFromFiberToRoot(
   sourceFiber: Fiber,
