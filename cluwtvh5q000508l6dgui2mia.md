@@ -2,7 +2,7 @@
 title: "[번역] React ErrorBoundary는 어떻게 동작하나요?"
 datePublished: Fri Apr 12 2024 15:33:31 GMT+0000 (Coordinated Universal Time)
 cuid: cluwtvh5q000508l6dgui2mia
-slug: react-errorboundary
+slug: react-internals-deep-dive-6
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1712935908689/c51c39f2-67d0-4529-9d6a-860fb8529e5f.jpeg
 tags: react-internals
 
@@ -13,7 +13,7 @@ tags: react-internals
 
 ---
 
-> ℹ️ [React Internals Deep Dive](https://jser.dev/series/react-source-code-walkthrough.html) 에피소드 5, [유튜브에서 제가 설명하는 것](https://www.youtube.com/watch?v=0TnuJKLjMyg&list=PLvx8w9g4qv_p-OS-XdbB3Ux_6DMXhAJC3&index=6)을 시청해주세요.
+> ℹ️ [React Internals Deep Dive](https://jser.dev/series/react-source-code-walkthrough.html) 에피소드 6, [유튜브에서 제가 설명하는 것](https://www.youtube.com/watch?v=0TnuJKLjMyg&list=PLvx8w9g4qv_p-OS-XdbB3Ux_6DMXhAJC3&index=6)을 시청해주세요.
 > 
 > ⚠ [React@18.2.0](https://github.com/facebook/react/releases/tag/v18.2.0) 기준, 최신 버전에서는 구현이 변경되었을 수 있습니다.
 
@@ -196,7 +196,7 @@ function createClassErrorUpdate(
 
 `throwException()` 에서 가장 가까운 ErrorBoundary를 찾았지만 아직 파이버 트리의 **current 커서**를 그 경계로 이동하지 않았습니다. 가장 가까운 에러 바운더리로 거슬러 올라가서 거기서부터 다시 렌더링을 시도하는 것이 *언와인딩* 과정입니다.
 
-그리고 언와인딩은 이 글의 앞부분에서 언급했던 `completeUnitOfWork()` 내부에서 이루어집니다.
+그리고 *언와인딩*은 이 글의 앞 부분에서 언급했던 `completeUnitOfWork()` 내부에서 이루어집니다.
 
 > ℹ complete() 단계의 작업에 대한 자세한 내용은 [React는 파이버 트리를 어떻게 순회 할까요?](https://jser.dev/react/2022/01/16/fiber-traversal-in-react/) 를 참고하세요.
 
