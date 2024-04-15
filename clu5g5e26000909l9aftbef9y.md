@@ -127,7 +127,7 @@ export default watchFetchDataSaga;
 
 **예시) Context API나 Hooks를 통한 상태 관리 비동기 처리**
 
-* 상태 관리를 위한 Contet와 Reducer 설정
+* 상태 관리를 위한 Context와 Reducer 설정
     
 
 ```javascript
