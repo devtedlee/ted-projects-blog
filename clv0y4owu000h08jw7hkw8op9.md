@@ -1,5 +1,5 @@
 ---
-title: "[번역] 리액트 동시성 모드에서 Suspense는 어떻게 동작하는가 1 - Reconciling flow"
+title: "[번역] React 동시성 모드에서 Suspense는 어떻게 동작하는가 1 - Reconciling flow"
 datePublished: Mon Apr 15 2024 12:43:44 GMT+0000 (Coordinated Universal Time)
 cuid: clv0y4owu000h08jw7hkw8op9
 slug: react-internals-deep-dive-7-1
