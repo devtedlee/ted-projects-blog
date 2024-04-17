@@ -2,7 +2,7 @@
 title: "[번역] React 동시성 모드에서 Suspense는 어떻게 동작하는가 2 - Offscreen 컴포넌트"
 datePublished: Wed Apr 17 2024 04:25:33 GMT+0000 (Coordinated Universal Time)
 cuid: clv3b7qnq000w08k0g8rfc53r
-slug: react-suspense-2-offscreen
+slug: react-internals-deep-dive-7-2
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1713327784180/b7c4df86-f43a-49e2-a2c4-645cb3d7ff91.jpeg
 tags: react-internals
 
