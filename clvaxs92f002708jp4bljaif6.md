@@ -9,7 +9,7 @@ tags: react-internals
 ---
 
 > ***영문 블로그 글을 번역했습니다. 허가를 받으면 시리즈를 이어갈 예정입니다.  
-> 원문링크:*** [https://jser.dev/2023-05-19-how-does-usetransition-work](https://jser.dev/2023-05-19-how-does-usetransition-work)
+> 원문링크:***[https://jser.dev/2023-05-19-how-does-usetransition-work](https://jser.dev/2023-05-19-how-does-usetransition-work)
 
 ---
 
@@ -21,7 +21,7 @@ tags: react-internals
 > 그 외 주석은 리액트 소스 코드 자체의 주석입니다.  
 > ... 은 생략된 코드입니다.***
 
-## 1\. useTransition()의 무엇을 하나요?
+## 1\. useTransition()은 무엇을 하나요?
 
 이 기능이 무엇인지 알고 싶으시다면 [react.dev의 공식 문서](https://react.dev/reference/react/useTransition)에서 가장 잘 설명되어 있습니다.
 
@@ -635,4 +635,4 @@ function finishConcurrentRender(
 
 `useTransition()`은 특정 업데이트의 우선순위를 낮출 수 있는 강력한 도구입니다. 클릭과 같은 이벤트는 실제로 동시성 모드에서 업데이트를 트리거하기 때문에 `useTransition()`은 동시성 모드의 명시적 opt-in 역할을 합니다.
 
-업데이트 차단을 피하는 것보다 더 나은 사용 사례는 **불필요한 Suspense 폴백을 피하는** **것**이므로 가능한 한 많이 사용해야 한다고 생각합니다.
+업데이트 차단을 피하는 것보다 더 나은 사용 사례는 **불필요한 Suspense 폴백을 피하는것**이므로 가능한 한 많이 사용해야 한다고 생각합니다.
