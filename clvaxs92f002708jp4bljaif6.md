@@ -1,5 +1,5 @@
 ---
-title: "[번역] 리액트에서 useTransition()은 어떻게 동작하나요?"
+title: "[번역] React에서 useTransition()은 어떻게 동작하나요?"
 datePublished: Mon Apr 22 2024 12:31:45 GMT+0000 (Coordinated Universal Time)
 cuid: clvaxs92f002708jp4bljaif6
 slug: react-internals-deep-dive-8
