@@ -21,6 +21,21 @@ tags: react-internals
 > 그 외 주석은 리액트 소스 코드 자체의 주석입니다.  
 > ... 은 생략된 코드입니다.***
 
+- [1. useTransition()은 무엇을 하나요?](#heading-1-usetransition)
+- [2. useTransition()은 어떻게 동작하나요?](#heading-2-usetransition)
+  - [2.1 mountTransition()](#heading-21)
+  - [2.2 startTransition()은 2개의 state 업데이트 (하나의 normal 와 하나의 under transition)를 트리거합니다.](#heading-22-starttransition은-state-normal-under-transition)
+  - [2.3 requestUpdateLane()은 `ReactCurrentBatchConfig.transition이` 설정된 경우 Transition Lanes를 반환합니다.](#heading-23-requestupdatelane-reactcurrentbatchconfigtransition-transition-lanes)
+  - [2.4 Transition Lanes는 낮은 우선순위의 레인입니다.](#heading-24-transition-lanes)
+  - [2.5 `updateTransition()`](#heading-25-updatetransition)
+  - [2.6 `startTransition()`](#heading-26-starttransition)
+- [3. 학습 내용을 통해 데모를 더 잘 이해하기](#heading-3)
+  - [3.1 사용 사례 1 - state 업데이트를 논-블록 transition으로 표시하기](#heading-31-state-transition)
+  - [3.2 사용 사례 2 - transition에서 부모 컴포넌트 업데이트하기](#heading-32-2-transition)
+  - [3.3 사용 사례 3 - transition 중에 보류 중인 시각적 state 표시](#heading-33-3-transition-state)
+  - [3.4 사용 사례 4 - 원치 않는 로딩 표시기 방지하기](#heading-34-4)
+- [4. 요약](#heading-4)
+
 ## 1\. useTransition()은 무엇을 하나요?
 
 이 기능이 무엇인지 알고 싶으시다면 [react.dev의 공식 문서](https://react.dev/reference/react/useTransition)에서 가장 잘 설명되어 있습니다.
