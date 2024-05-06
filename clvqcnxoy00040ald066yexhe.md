@@ -2,7 +2,7 @@
 title: "[번역] React useImperativeHandle() 은 어떻게 동작하나요?"
 datePublished: Fri May 03 2024 07:24:51 GMT+0000 (Coordinated Universal Time)
 cuid: clvqcnxoy00040ald066yexhe
-slug: react-useimperativehandle
+slug: react-internals-deep-dive-12
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1714721050713/6f070904-cfec-4f69-8e3f-74371f50ff57.jpeg
 tags: reactjs, react-internals, useimperativehandle
 
