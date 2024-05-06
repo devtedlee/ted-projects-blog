@@ -132,7 +132,7 @@ React 소스 코드에서, `마운트`는 초기 렌더링을 의미하는데, �
 
 관련 주제는 다음을 참조하세요:
 
-1. [EP5 - useState()는 어떻게 작동하나요?](https://jser.dev/2023-06-19-how-does-usestate-work/)
+1. [EP5 - useState()는 어떻게 작동하나요?](https://ted-projects.com/react-internals-deep-dive-5)
     
 
 ### 3.2 Scheduler
@@ -173,11 +173,11 @@ React 소스 코드에서, `마운트`는 초기 렌더링을 의미하는데, �
 
 관련 에피소드:
 
-1. [EP10 - useLayoutEffect()는 어떻게 작동하나요?](https://jser.dev/react/2021/12/04/how-does-useLayoutEffect-work/)
+1. [EP10 - useLayoutEffect()는 어떻게 작동하나요?](https://ted-projects.com/react-internals-deep-dive-10)
     
-2. [EP4 - useEffect()는 어떻게 작동하나요?](https://jser.dev/2023-07-08-how-does-useeffect-work/)
+2. [EP4 - useEffect()는 어떻게 작동하나요?](https://cdn.hashnode.com/res/hashnode/image/upload/v1712560949630/0ed6696c-8e68-4f45-8d24-5f3c6d27a16c.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)
     
-3. [EP8 - useTransition()은 어떻게 작동하나요?](https://jser.dev/2023-05-19-how-does-usetransition-work/)
+3. [EP8 - useTransition()은 어떻게 작동하나요?](https://ted-projects.com/react-internals-deep-dive-8)
     
 4. [EP16 - Effect Hooks의 생명 주기](https://jser.dev/react/2022/01/19/lifecycle-of-effect-hook/)
     
@@ -190,4 +190,4 @@ React 소스 코드에서, `마운트`는 초기 렌더링을 의미하는데, �
 
 이 게시물이 도움이 되었기를 바랍니다.
 
-(원본 게시일: 2023-07-11Jul 11, 2023)
+(원본 게시일: 2023-07-11)
