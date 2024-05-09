@@ -8,7 +8,7 @@ tags: reacthooks, react-18
 
 ---
 
-`useSyncExternalStore`는 React 18에서 도입된 훅입니다. 외부(External) 상태 저장소를 React 컴포넌트와 동기화 하기 위해서 사용됩니다. 간단하게 기능을 설명하자면 이 훅을 통해 컴포넌트가 외부 상태의 변화를 구독하고, 해당 상태가 변경될 때마다 컴포넌트를 리렌더링 해줍니다.
+`useSyncExternalStore`는 React 18에서 도입된 훅입니다. 외부(External) 상태 저장소를 React 컴포넌트와 동기화 하기 위해서 사용됩니다. React 18에서 Concurrent Mode가 도입되며 외부 상태 관리 패키지를 사용할 때 [티어링](https://github.com/reactwg/react-18/discussions/69) 이슈가 발생할 수 있게 되어 이를 보완하고자 만들어진 방식입니다. 간단하게 기능을 설명하자면 이 훅을 통해 컴포넌트가 외부 상태의 변화를 구독하고, 해당 상태가 변경될 때마다 컴포넌트를 리렌더링 해줍니다.
 
 ## 기본 사용법
 
