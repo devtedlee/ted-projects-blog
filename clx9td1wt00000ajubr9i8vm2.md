@@ -9,11 +9,11 @@ tags: react-internals, react-suspense
 ---
 
 > ***영문 블로그 글을 번역했습니다. 허가를 받으면 시리즈를 이어갈 예정입니다.  
-> 원문링크:*** [https://jser.dev/react/2022/06/19/how-does-suspense-list-work](https://jser.dev/react/2022/06/19/how-does-suspense-list-work)
+> 원문링크:***[https://jser.dev/react/2022/06/19/how-does-suspense-list-work](https://jser.dev/react/2022/06/19/how-does-suspense-list-work)
 
 ---
 
-> ***ℹ️***[***React Internals Deep Dive***](https://jser.dev/series/react-source-code-walkthrough.html) ***에피소드 25,*** [***유튜브에서 제가 설명하는 것***](https://www.youtube.com/watch?v=ByeeMsIElFE&list=PLvx8w9g4qv_p-OS-XdbB3Ux_6DMXhAJC3&index=25)***을 시청해주세요.***
+> ***ℹ️***[***React Internals Deep Dive***](https://jser.dev/series/react-source-code-walkthrough.html)***에피소드 25,***[***유튜브에서 제가 설명하는 것***](https://www.youtube.com/watch?v=ByeeMsIElFE&list=PLvx8w9g4qv_p-OS-XdbB3Ux_6DMXhAJC3&index=25)***을 시청해주세요.***
 > 
 > ***⚠***[***React@18.2.0***](https://github.com/facebook/react/releases/tag/v18.2.0)***기준, 최신 버전에서는 구현이 변경되었을 수 있습니다.***
 > 
@@ -29,7 +29,7 @@ tags: react-internals, react-suspense
 
 먼저 [SuspenseList를 사용하지 않고 여러 개의 Suspense 데모](https://jser.dev/demos/react/suspense/multiple-suspense.html)를 시도해 보겠습니다.
 
-```typescript
+```svelte
 <div>Hi</div>
 <React.Suspense fallback={<p>loading...</p>}>
   <Child resource={resource1} />
@@ -54,7 +54,7 @@ tags: react-internals, react-suspense
 
 > SuspenseList를 사용해보기 위해 실험용 빌드를 사용합니다.
 
-```typescript
+```svelte
 <div>Hi</div>
 <React.SuspenseList revealOrder="forwards">
   <React.Suspense fallback={<p>loading...</p>}>
@@ -79,7 +79,7 @@ tags: react-internals, react-suspense
 
 상당히 복잡하기 때문에 먼저 이런 기능을 어떻게 구현할지 생각해 보겠습니다.
 
-핵심 정보는 **프로미스 이행 순서(promise fullfilling order)**에 대한 정보로, 서스펜스가 자신의 내용을 공개하려고 할 때, 다른 형제들의 프로미스 상태와 자신의 순서를 포함한 형제들의 정보가 필요하기 때문에 기본적으로 공개 여부를 결정하기 위해 추가 정보가 필요합니다.
+핵심 정보는 \*\*프로미스 이행 순서(promise fullfilling order)\*\*에 대한 정보로, 서스펜스가 자신의 내용을 공개하려고 할 때, 다른 형제들의 프로미스 상태와 자신의 순서를 포함한 형제들의 정보가 필요하기 때문에 기본적으로 공개 여부를 결정하기 위해 추가 정보가 필요합니다.
 
 파이버의 트리 구조 때문에 조상을 통해서만 형제자매에게 일부 정보를 공유할 수 있기 때문에, 기본적으로 더 많은 제어를 위해 컨텍스트가 필요합니다.
 
@@ -137,7 +137,7 @@ function shouldRemainOnFallback(
 
 주석을 보면 SuspenseList가 명시적으로 언급되어 있음을 알 수 있습니다. 첫 번째 브랜치는 기본적으로 이미 공개된 경우 콘텐츠를 계속 표시합니다.
 
-**ForceSuspenseFallback이 suspenseContext에 있으면, 프로미스가 이행되더라도 여전히 폴백이 표시되어야** **함**을 알 수 있습니다.
+**ForceSuspenseFallback이 suspenseContext에 있으면, 프로미스가 이행되더라도 여전히 폴백이 표시되어야함**을 알 수 있습니다.
 
 ### 2.3 SuspenseContext와 ReactFiberStack
 
