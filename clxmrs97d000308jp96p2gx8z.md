@@ -9,11 +9,11 @@ tags: react-internals, react-portal
 ---
 
 > ***영문 블로그 글을 번역했습니다. 허가를 받으면 시리즈를 이어갈 예정입니다.  
-> 원문링크:*** [https://jser.dev/react/2022/09/24/how-does-react-portal-work](https://jser.dev/react/2022/09/24/how-does-react-portal-work)
+> 원문링크:***[https://jser.dev/react/2022/09/24/how-does-react-portal-work](https://jser.dev/react/2022/09/24/how-does-react-portal-work)
 
 ---
 
-> ***ℹ️***[***React Internals Deep Dive***](https://jser.dev/series/react-source-code-walkthrough.html)***에피소드 26,*** [***유튜브에서 제가 설명하는 것***](https://www.youtube.com/watch?v=GVefHHDVltQ&list=PLvx8w9g4qv_p-OS-XdbB3Ux_6DMXhAJC3&index=26)***을 시청해주세요.***
+> ***ℹ️***[***React Internals Deep Dive***](https://jser.dev/series/react-source-code-walkthrough.html) ***에피소드 26,*** [***유튜브에서 제가 설명하는 것***](https://www.youtube.com/watch?v=GVefHHDVltQ&list=PLvx8w9g4qv_p-OS-XdbB3Ux_6DMXhAJC3&index=26)***을 시청해주세요.***
 > 
 > ***⚠***[***React@18.2.0***](https://github.com/facebook/react/releases/tag/v18.2.0)***기준, 최신 버전에서는 구현이 변경되었을 수 있습니다.***
 > 
