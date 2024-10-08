@@ -1,5 +1,5 @@
 ---
-title: "[번역] React가 빈 값을 다루는 것은 어떻게 동작하나요?"
+title: "[번역] React에서 빈 값(empty values)은 어떻게 다뤄지나요?"
 datePublished: Fri May 17 2024 02:59:34 GMT+0000 (Coordinated Universal Time)
 cuid: clwa3cpsv000309l32eqkd28d
 slug: react-internals-deep-dive-18
