@@ -50,20 +50,20 @@ tags: design-patterns, closure, javascript
     * 참고: 렉시컬 환경은 실행할 스코프 범위 안에 있는 변수와 함수를 프로퍼티로 저장하는 객체입니다.
         
 * ```javascript
-      function settingsFactory() {
-          return {
-              theme: 'dark',
-              language: 'ko',
-              changeSetting: function (key, value) {
-                  this[key] = value;
-              }
-          };
-      }
-      
-      const userSettings = settingsFactory();
-      userSettings.theme; // 'dark'
-      userSettings.changeSetting('theme', 'light');
-      userSettings.theme; // 'light'
+        function settingsFactory() {
+            return {
+                theme: 'dark',
+                language: 'ko',
+                changeSetting: function (key, value) {
+                    this[key] = value;
+                }
+            };
+        }
+        
+        const userSettings = settingsFactory();
+        userSettings.theme; // 'dark'
+        userSettings.changeSetting('theme', 'light');
+        userSettings.theme; // 'light'
     ```
     
     이 예시에서 `settingsFactory` 함수는 각 사용자 설정 객체를 생성합니다. 생성된 객체는 독립적인 설정 값을 유지하며, 클로저를 통해 각 객체의 상태를 관리합니다.
@@ -76,21 +76,21 @@ tags: design-patterns, closure, javascript
 * 각 전략을 클로저로 구현하여 특정 컨텍스트에서 다양한 알고리즘을 쉽게 교체할 수 있습니다.
     
 * ```javascript
-      function themeStrategy(theme) {
-          const themes = {
-              dark: function () {
-                  console.log('apply dark theme');
-              },
-              light: function () {
-                  console.log('apply light theme');
-              }
-          };
-      
-          return themes[theme] || themes.dark;
-      }
-      
-      const currentTheme = themeStrategy('light');
-      currentTheme(); // apply light theme
+        function themeStrategy(theme) {
+            const themes = {
+                dark: function () {
+                    console.log('apply dark theme');
+                },
+                light: function () {
+                    console.log('apply light theme');
+                }
+            };
+        
+            return themes[theme] || themes.dark;
+        }
+        
+        const currentTheme = themeStrategy('light');
+        currentTheme(); // apply light theme
     ```
     
     전략 패턴에서는 `themeStrategy` 함수가 여러 테마 적용 전략 중 하나를 선택해 반환 합니다. 반환된 함수(전략)는 클로저를 통해 자신이 호출될 때 필요한 정보(여기서는 콘솔 로그 메시지)를 "기억"합니다.
@@ -103,28 +103,28 @@ tags: design-patterns, closure, javascript
 * 명령을 클로저로 캡슐화하여, 실행할 명령과 함께 모든 필요한 정보를 보관할 수 있습니다. 이를 통해 명령의 실행을 지연시키거나, 취소, 재시도 하는 등의 작업을 유연하게 처리할 수 있습니다.
     
 * ```javascript
-      function createChangeSettingCommand(settings, key, value) {
-          const previous = settings[key];
-          return {
-              execute: function() {
-                  settings[key] = value;
-              },
-              undo: function() {
-                  settings[key] = previous;
-              }
-          };
-      }
-      
-      const settings = {
-          theme: 'light',
-          language: 'ko'
-      };
-      
-      const changeThemeCommand = createChangeSettingCommand(settings, 'theme', 'dark');
-      changeThemeCommand.execute();
-      settings.theme; // 'dark'
-      changeThemeCommand.undo();
-      settings.theme; // 'light'
+        function createChangeSettingCommand(settings, key, value) {
+            const previous = settings[key];
+            return {
+                execute: function() {
+                    settings[key] = value;
+                },
+                undo: function() {
+                    settings[key] = previous;
+                }
+            };
+        }
+        
+        const settings = {
+            theme: 'light',
+            language: 'ko'
+        };
+        
+        const changeThemeCommand = createChangeSettingCommand(settings, 'theme', 'dark');
+        changeThemeCommand.execute();
+        settings.theme; // 'dark'
+        changeThemeCommand.undo();
+        settings.theme; // 'light'
     ```
     
     명령 패턴에서 `createChangeSettingCommand` 함수는 설정을 변경하는 명령 객체를 생성합니다. 이 객체는 `execute`와 `undo` 메서드를 통해 설정 변경 작업을 수행하고 되돌릴 수 있습니다. 클로저를 통해 이전 상태(`previous`)를 기억하고, 필요할 때 원상태로 되돌릴 수 있습니다.
