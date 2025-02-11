@@ -11,6 +11,11 @@ tags: webpack, migration, vite
 
 ---
 
+<div data-node-type="callout">
+<div data-node-type="callout-emoji">💡</div>
+<div data-node-type="callout-text">이 글에서는 React 프로젝트를 Webpack에서 Vite로 마이그레이션한 경험을 공유합니다. 주요 변경 사항, 설정 조정, 그리고 최종적으로 얻은 성능 향상에 대해 알아보세요. 개발 환경 속도가 크게 개선되고 복잡한 설정이 줄어든 과정을 확인하실 수 있습니다.</div>
+</div>
+
 # 마이그레이션 이유
 
 * 번들링 속도 개선: 개발 환경에서 개발시, 배포 빌드시 속도를 개선해줍니다.
@@ -81,8 +86,7 @@ tags: webpack, migration, vite
 
 # 최종 config 파일들 상태
 
-* 회사 도메인 연관 코드는 삭제했습니다.
-    
+> 회사 도메인 연관 코드는 삭제했습니다.
 
 ### 변경 전 webpack 설정
 
