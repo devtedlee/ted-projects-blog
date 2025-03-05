@@ -6,7 +6,7 @@ datePublished: Mon Jan 29 2024 07:05:22 GMT+0000 (Coordinated Universal Time)
 cuid: clryl4ylu000a09jqcsur00o6
 slug: teo-trevari-review
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1706511724632/10c07a7e-3fc7-4057-9709-0c8f8e20aa72.png
-ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1706511890523/6780ec78-5e5d-4831-975c-e172c8ad5b83.png
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1741167277582/5a1f27b5-a484-4f85-aee0-093997939596.png
 tags: 7zqm6rog, 64f7isc66qo7j6e, 7yq466ci67cu66as, 7ywm7jik
 
 ---
