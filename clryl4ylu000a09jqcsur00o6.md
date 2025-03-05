@@ -5,8 +5,6 @@ seoDescription: "테오 트레바리 독서모임 4개월간의 여정을 회고
 datePublished: Mon Jan 29 2024 07:05:22 GMT+0000 (Coordinated Universal Time)
 cuid: clryl4ylu000a09jqcsur00o6
 slug: teo-trevari-review
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1741167304104/57df9829-c7d2-4cc2-bfd0-3d48780010a2.png
-ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1741167277582/5a1f27b5-a484-4f85-aee0-093997939596.png
 tags: 7zqm6rog, 64f7isc66qo7j6e, 7yq466ci67cu66as, 7ywm7jik
 
 ---
