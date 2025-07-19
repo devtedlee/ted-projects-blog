@@ -4,8 +4,8 @@ seoTitle: "postmortem-fedify-nodejs"
 datePublished: Sat Jul 19 2025 16:47:14 GMT+0000 (Coordinated Universal Time)
 cuid: cmdahdp14000202l723ejhwyq
 slug: postmortem-fedify-nodejs
-cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/LhqLdDPcSV8/upload/1c6b7cc3303c03eb9e9da32cce9ff20a.jpeg
-ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1752943561320/c221617a-2831-4672-9fd2-5f033ad4e913.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1752944378297/2ddf731e-9bde-4429-b8be-8ada30ec0644.jpeg
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1752944391396/eab6198d-c8f8-4fa2-b3c2-516ba02d57a1.jpeg
 tags: nodejs, postmortem, fedify
 
 ---
