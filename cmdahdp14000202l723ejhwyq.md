@@ -17,14 +17,13 @@ tags: nodejs, postmortem, fedify
 프로젝트를 진행하던 중, 사용자(johndoe) 조회(lookup) 요청에서 publicKey 필드가 비어 나오는 이슈가 발생했습니다. 결과는 이랬어요:
 
 ```json
-Apply to federation.t...
-Person {
-  id: URL "http://localhost:8000/users/johndoe",
-  name: "johndoe",
-  url: URL "http://localhost:8000/users/johndoe",
-  preferredUsername: "johndoe",
-  inbox: URL "http://localhost:8000/users/johndoe/inbox",
-  endpoints: Endpoints { sharedInbox: URL "http://localhost:8000/inbox" }
+Person {
+  id: URL "http://localhost:8000/users/johndoe",
+  name: "johndoe",
+  url: URL "http://localhost:8000/users/johndoe",
+  preferredUsername: "johndoe",
+  inbox: URL "http://localhost:8000/users/johndoe/inbox",
+  endpoints: Endpoints { sharedInbox: URL "http://localhost:8000/inbox" }
 }
 ```
 
@@ -39,7 +38,10 @@ fedify 프로젝트 메인테이너이신 [hongminhee](https://hackers.pub/@hong
 * **오전 12:42**: 로그 추가 조언. return pairs 전에 console.debug({pairs}) 찍어보니 pairs가 제대로 나옴:
     
 * ```json
-      Apply to federation.t...  pairs [    { privateKey: CryptoKey {...}, publicKey: CryptoKey {...} },  // RSASSA-PKCS1-v1_5    { privateKey: CryptoKey {...}, publicKey: CryptoKey {...} }   // Ed25519  ]
+      pairs [
+        { privateKey: CryptoKey {...}, publicKey: CryptoKey {...} },  // RSASSA-PKCS1-v1_5
+        { privateKey: CryptoKey {...}, publicKey: CryptoKey {...} }   // Ed25519
+      ]
     ```
     
 * 하지만 요청은 실패. 에러: TypeError: t.buffer.transfer is not a function.
@@ -47,7 +49,9 @@ fedify 프로젝트 메인테이너이신 [hongminhee](https://hackers.pub/@hong
 * **오전 12:47**: DB 초기화 후 재시도. 로그는 찍히지만 실패. 스택 트레이스 확인
     
 * ```bash
-      Apply to federation.t...Run  TypeError: t.buffer.transfer is not a function  at y (file:///.../chunk-JF3YMNGM.js:1:140)  // ... (byte-encodings와 Fedify 내부 함수 관련)
+      TypeError: t.buffer.transfer is not a function
+      at y (file:///.../chunk-JF3YMNGM.js:1:140)
+      // ... (byte-encodings와 Fedify 내부 함수 관련)
     ```
     
 * **오전 12:59**: Node.js 버전 확인. 내 버전: 20.19.2.
