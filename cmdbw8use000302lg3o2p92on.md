@@ -1,5 +1,5 @@
 ---
-title: "흩어진 지식을 '구조화된 역량'으로 바꾸는 법"
+title: "흩어진 지식을 '구조화된 역량'으로 바꾸기"
 datePublished: Sun Jul 20 2025 16:31:09 GMT+0000 (Coordinated Universal Time)
 cuid: cmdbw8use000302lg3o2p92on
 slug: tedpool-essay-0
