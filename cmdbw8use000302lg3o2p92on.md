@@ -3,8 +3,8 @@ title: "흩어진 지식을 '구조화된 역량'으로 바꾸기"
 datePublished: Sun Jul 20 2025 16:31:09 GMT+0000 (Coordinated Universal Time)
 cuid: cmdbw8use000302lg3o2p92on
 slug: tedpool-essay-0
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1753028896264/f435015e-8b7b-4840-8fce-58cafa3865cb.jpeg
-ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1753028938926/bba85f7f-2690-4602-9da9-04259603cf01.jpeg
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1753175519795/ead70861-f913-4aad-9a7a-bf231fdc1117.jpeg
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1753175530116/f4e83a18-637c-41c8-9d12-bf82281bd0c7.jpeg
 tags: developer, career, unstoppable-brain
 
 ---
