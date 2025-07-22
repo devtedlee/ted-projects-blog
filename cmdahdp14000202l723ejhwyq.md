@@ -6,7 +6,7 @@ cuid: cmdahdp14000202l723ejhwyq
 slug: postmortem-fedify-nodejs
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1753175413334/fc280412-f945-4094-9c56-e1c38c680c64.jpeg
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1753175422201/e1d2717b-2d8f-48a7-9de1-b0dba05413d7.jpeg
-tags: nodejs, postmortem, fedify
+tags: nodejs, postmortem, fediverse, fedify
 
 ---
 
