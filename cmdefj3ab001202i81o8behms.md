@@ -1,5 +1,5 @@
 ---
-title: "[기술 회고] 토큰 갱신 로직, 어디에 둬야 할까?"
+title: "토큰 갱신 로직, 어디에 둬야 할까?"
 datePublished: Tue Jul 22 2025 11:06:31 GMT+0000 (Coordinated Universal Time)
 cuid: cmdefj3ab001202i81o8behms
 slug: tech-0
