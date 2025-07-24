@@ -2,7 +2,7 @@
 title: "토큰 갱신 로직, 어디에 둬야 할까?"
 datePublished: Tue Jul 22 2025 11:06:31 GMT+0000 (Coordinated Universal Time)
 cuid: cmdefj3ab001202i81o8behms
-slug: tech-0
+slug: jwt-token-refresh
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1753174514486/f2d01f75-0589-4554-ac1d-efdb72dd0281.jpeg
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1753174521730/52ec4ac6-ede9-446f-9725-af93138e4e5f.jpeg
 tags: access-token, refresh-token, retrospective
