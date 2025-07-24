@@ -2,7 +2,7 @@
 title: "Nginx 프록시 설정 문제 해결기"
 datePublished: Thu Jul 24 2025 14:15:41 GMT+0000 (Coordinated Universal Time)
 cuid: cmdhh62dr000a02l241iagkpz
-slug: retrospect-front-server-nginx
+slug: nginx-405-404-301
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1753365020153/18253f91-0a00-4f82-ad77-042160e14912.jpeg
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1753366531198/d8e297cb-32af-4289-9529-cef647dc5bd0.jpeg
 tags: frontend, nginx
