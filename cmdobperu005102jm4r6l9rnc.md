@@ -12,7 +12,7 @@ tags: react-query, tanstack-query, react-query-internals
 
 ## 들어가며
 
-React Query는 현대 리액트 개발에서 서버 상태 관리의 사실상 표준이 되었습니다. 하지만 `useQuery()`만 사용하다 보면 내부에서 어떤 마법이 일어나는지 궁금해집니다. [김정환님의 블로그](https://jeonghwan-kim.github.io/2025/05/11/how-react-query-works)를 참고하여 React Query의 내부 동작을 체계적으로 분석해봤습니다.
+React Query는 비동기 상태 관리 라이브러리로서 리액트 개발에서 서버 상태 관리의 사실상 표준처럼 사용되고 있습니다. 하지만 `useQuery()`를 사용하다 보면 내부에서 어떤 마법이 일어나는지 궁금해집니다. [김정환님의 블로그](https://jeonghwan-kim.github.io/2025/05/11/how-react-query-works)를 참고하여 React Query의 내부 동작을 체계적으로 분석해봤습니다.
 
 ## 아키텍처 개요
 
@@ -350,7 +350,7 @@ React Query의 내부 동작을 이해하면 다음과 같은 이점을 얻을 �
 * **명령형 API**로 컴포넌트 외부에서도 쿼리 제어 가능
     
 
-React Query는 데이터 페칭 라이브러리일 뿐 아니라 정교하게 설계된 상태 관리 시스템입니다. 이러한 내부 구조를 이해하고 활용한다면, 더욱 효율적이고 안정적인 React 애플리케이션을 개발할 수 있습니다.
+React Query는 데이터 페칭 역할 뿐 아니라 정교하게 설계된 비동기 상태 관리 시스템입니다. 이러한 내부 구조를 이해하고 활용한다면, 더욱 효율적이고 안정적인 React 애플리케이션을 개발할 수 있습니다.
 
 ---
 
