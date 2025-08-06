@@ -19,14 +19,14 @@ React는 어떻게 우리가 작성한 코드를 실제 눈에 보이는 DOM 요
 
 ```mermaid
 flowchart TD
-  subgraph 개발자_코드["개발자 코드 (index.js)"]
+  subgraph developer["개발자 코드 (index.js)"]
     A["react-dom/client 에서 'import { createRoot }'"]
     B["렌더링할 DOM 노드 가져오기<br>(예시: document.getElementById)"]
     C["createRoot(container)를 호출하여 root 객체 생성"]
     D["root.render(<App />)를 호출하여 렌더링 요청"]
   end
 
-  subgraph React_시스템["React 시스템"]
+  subgraph system["React 시스템"]
     E["React Root가 생성되고<br>렌더링 준비 완료"]
     F["<App /> 컴포넌트 트리가 실제 DOM으로 렌더링됨"]
   end
@@ -34,8 +34,8 @@ flowchart TD
   A --> B
   B --> C
   C --> D
-  C -.-> E
-  D -.-> F
+  C --> E
+  D --> F
 ```
 
 이처럼 개발자는 단지 `createRoot`로 렌더링의 뿌리를 만들고, `render` 함수로 무엇을 그릴지 알려주기만 하면 됩니다. 이제부터 이 단순한 함수 호출 뒤에서 React가 어떤 일을 하는지 내부로 깊이 들어가 보겠습니다.
