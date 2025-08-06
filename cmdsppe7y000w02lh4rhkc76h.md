@@ -17,22 +17,7 @@ React는 어떻게 우리가 작성한 코드를 실제 눈에 보이는 DOM 요
 
 모든 것은 개발자가 작성하는 몇 줄의 코드에서 시작됩니다. React가 내부적으로 복잡한 일을 하기 전에, 개발자는 어떤 순서로 React와 상호작용할까요? 다음 순서도는 개발자 입장에서의 전체적인 흐름을 보여줍니다.
 
-```mermaid
-graph TD
-    subgraph a["개발자 코드 (index.js)"]
-        A["react-dom/client 에서<br/>'import { createRoot }'"] --> B["렌더링할 DOM 노드 가져오기<br/>(예시: <br />document.getElementById)"]
-        B --> C["createRoot(container)를 <br/>호출하여 root 객체 생성"]
-        C --> D["root.render(&lt;App /&gt;)를 호출하여<br/>렌더링 요청"]
-    end
-
-    subgraph b["React 시스템"]
-        E["React Root가 생성되고<br/>렌더링 준비 완료"]
-        F["&lt;App /&gt; 컴포넌트 트리가<br/>실제 DOM으로 렌더링됨"]
-    end
-
-    C --> E
-    D --> F
-```
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1754470761787/3813c976-653e-4305-9d85-20ac5ce3c096.png align="center")
 
 이처럼 개발자는 단지 `createRoot`로 렌더링의 뿌리를 만들고, `render` 함수로 무엇을 그릴지 알려주기만 하면 됩니다. 이제부터 이 단순한 함수 호출 뒤에서 React가 어떤 일을 하는지 내부로 깊이 들어가 보겠습니다.
 
