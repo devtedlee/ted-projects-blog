@@ -19,14 +19,14 @@ React는 어떻게 우리가 작성한 코드를 실제 눈에 보이는 DOM 요
 
 ```mermaid
 flowchart TD
-  subgraph developer["개발자 코드 (index.js)"]
+  subgraph developer
     A["react-dom/client 에서 'import { createRoot }'"]
     B["렌더링할 DOM 노드 가져오기<br>(예시: document.getElementById)"]
     C["createRoot(container)를 호출하여 root 객체 생성"]
     D["root.render(<App />)를 호출하여 렌더링 요청"]
   end
 
-  subgraph system["React 시스템"]
+  subgraph system
     E["React Root가 생성되고<br>렌더링 준비 완료"]
     F["<App /> 컴포넌트 트리가 실제 DOM으로 렌더링됨"]
   end
