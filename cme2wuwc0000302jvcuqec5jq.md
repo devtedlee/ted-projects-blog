@@ -75,7 +75,7 @@ React 19의 기본적인 렌더링 과정은 이전 버전의 핵심 원칙을 �
 > 상태 변경부터 실제 UI 업데이트까지 이어지는 Trigger, Render, Commit 단계의 전체 흐름을 시각화합니다.
 
 ```mermaid
-graph TD
+flowchart TD
     subgraph "<1> 트리거 단계"
         A["상태 변경<br/>(예: setState)"] --> B{"업데이트 스케줄링"};
         B --> C["Fiber 경로에 'lanes' 표시<br/>리렌더링 위치 지정"];
