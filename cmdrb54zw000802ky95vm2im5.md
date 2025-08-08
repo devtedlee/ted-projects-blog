@@ -5,7 +5,6 @@ cuid: cmdrb54zw000802ky95vm2im5
 slug: react19-internals-0
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1753859510227/db215f33-a3b0-489d-9fa0-0494e96f792e.png
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1753859553825/a1750011-d663-4a83-ab1e-e7c28acdcfbc.png
-tags: react-internals, react-19
 
 ---
 
