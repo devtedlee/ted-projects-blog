@@ -76,25 +76,25 @@ React 19의 기본적인 렌더링 과정은 이전 버전의 핵심 원칙을 �
 
 ```mermaid
 flowchart TD
-    subgraph "<1> 트리거 단계"
-        A["상태 변경<br/>(예: setState)"]
-        B{"업데이트 스케줄링"}
-        C["Fiber 경로에 'lanes' 표시<br/>리렌더링 위치 지정"]
+    subgraph "[1] 트리거 단계"
+        A["상태 변경<br />(예: setState)"]
+        B["업데이트 스케줄링"]
+        C["Fiber 경로에 'lanes' 표시<br />리렌더링 위치 지정"]
     end
 
-    subgraph "<2> 렌더 단계"
+    subgraph "[2] 렌더 단계"
         D["루트에서 렌더링 시작"]
-        E{"Fiber 트리 순회"}
-        F{"업데이트 필요한가?<br/>(Bailout 로직)"}
+        E["Fiber 트리 순회"]
+        F["업데이트 필요한가?<br />(Bailout 로직)"]
         G["컴포넌트 건너뛰기"]
         H["자식 컴포넌트 재조정"]
         I["DOM 변경 플래그 표시<br/>(추가, 업데이트, 삭제)"]
         J["다음 Fiber로 이동"]
-        K{"순회 완료?"}
+        K["순회 완료?"]
         L["작업 완료된 Fiber 트리 생성"]
     end
 
-    subgraph "<3> 커밋 단계"
+    subgraph "[3] 커밋 단계"
         M["커밋 단계 시작"]
         N["실제 DOM에 변경사항 적용<br/>(삭제 → 업데이트 → 추가)"]
         O["UI 업데이트 완료"]
