@@ -2,7 +2,7 @@
 title: "React19 Internals 1: 초기 마운트"
 datePublished: Fri Aug 01 2025 11:00:08 GMT+0000 (Coordinated Universal Time)
 cuid: cmdsppe7y000w02lh4rhkc76h
-slug: react-19-internals-1
+slug: react19-internals-1
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1753943146993/407f3f8c-41c2-482d-af03-f396a0c2ac03.png
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1753943157182/ab529a49-e8bb-4316-bcd6-d4ef1580b86d.png
 tags: reactjs, react-internals, react-19
