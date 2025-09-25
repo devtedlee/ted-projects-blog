@@ -3,7 +3,7 @@ title: "npm workspaces 모노레포 적용 회고"
 datePublished: Thu Sep 25 2025 11:31:30 GMT+0000 (Coordinated Universal Time)
 cuid: cmfzc1l84000b02jyhbaw6qmt
 slug: npm-workspaces
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1758705590172/50ab40b4-f48c-41e6-8a13-f64b04881f40.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1758813799639/795a8255-ca5e-4a4a-988a-4eeeffe2ccb2.png
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1758705602928/6cc9fec0-6475-4a5b-ab6c-556b2c65f3bd.png
 tags: reactjs, npm-workspaces
 
