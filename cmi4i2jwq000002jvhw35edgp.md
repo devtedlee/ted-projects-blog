@@ -19,7 +19,7 @@ tags: ai, react-router
 
 헤더의 2depth 메뉴에서 현재 페이지를 나타내는 활성 상태 스타일이 작동하지 않는다는 이슈를 할당 받았습니다.
 
-```tsx
+```typescript
 // 문제가 된 코드
 <NavLink
   to={item.href}
@@ -40,7 +40,7 @@ NavLink의 `className`이 문자열로 고정되면서 `isActive` prop을 활용
 
 AI는 문제를 파악하고 NavLink의 `className`을 콜백 함수로 변경했습니다.
 
-```tsx
+```typescript
 <NavLink
   className={({ isActive }) =>
     cn(
@@ -69,7 +69,7 @@ AI는 문제를 파악하고 NavLink의 `className`을 콜백 함수로 변경�
 
 > "아! 2depth 메뉴는 **선택되지 않은 1depth의 하위는 회색**, **마우스 오버만 파란색**이구나!"
 
-```tsx
+```typescript
 className={({ isActive }) =>
   cn(
     "... hover:text-primary-normal",
@@ -92,9 +92,9 @@ className={({ isActive }) =>
 
 > "Line 198의 className 콜백이 isActive가 false일 때 항상 placeholder를 반환하면서, 현재 1depth 아래의 다른 2depth 링크들도 전부 placeholder로 표시됩니다."
 
-AI는 3단계 분기가 필요하다고 판단했습니다:
+AI는 3단계 분기가 필요하다고 판단했습니다
 
-```tsx
+```typescript
 className={({ isActive }) =>
   cn(
     "... hover:text-primary-normal",
@@ -119,9 +119,9 @@ className={({ isActive }) =>
 
 > "하 진짜 가이드에 맞는 구현이라니까 왜 자꾸 activeFirstDepthMenu 들이대냐고 아니라고!!!"
 
-**최종 정답**:
+**최종 정답**
 
-```tsx
+```typescript
 className={({ isActive }) =>
   cn(
     "block p-0 w-full text-center whitespace-nowrap rounded transition-all text-body-14 hover:text-primary-normal",
